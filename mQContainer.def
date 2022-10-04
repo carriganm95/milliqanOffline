@@ -1,7 +1,9 @@
-#BootStrap: docker
-#From: centos:centos7
-BootStrap: localimage
-From: /home/mcarrigan/work/milliqanOfflineContainer/offline
+BootStrap: docker
+From: centos:centos7
+
+#If image already built
+#BootStrap: localimage
+#From: /home/mcarrigan/work/milliqanOfflineContainer/offline
 
 %runscript
     
