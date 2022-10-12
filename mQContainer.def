@@ -49,6 +49,10 @@ From: centos:centos7
     make clean
     make shared
     echo "Compiled MilliDAQ shared library"
+    
+    cd ../milliqanOffline
+    checkout -b compilationUpdates origin/compilationUpdates
+    cd ../
 
     chmod -R a+rwx milliqanOffline
     chmod -R a+rwx MilliDAQ
