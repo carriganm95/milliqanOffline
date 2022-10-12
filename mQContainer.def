@@ -9,18 +9,19 @@ From: centos:centos7
     
 %test
     python3 -c "import ROOT"
+    echo "Container created!"
 
 %post
 
     yum -y install epel-release
-    yum -y install which 
+    yum -y install which
 
     yum -y install emacs-nox
     yum -y install git
     yum -y install cmake3
 
     yum -y install gcc
-    yum -y install kernel-devel 
+    yum -y install kernel-devel
 
     yum -y install llvm llvm-devel llvm-static
 
@@ -48,11 +49,7 @@ From: centos:centos7
     make clean
     make shared
     echo "Compiled MilliDAQ shared library"
-    cd ../milliqanOffline
-    git checkout -b compilationUpdates origin/compilationUpdates
-    bash compile.sh test.exe
 
-    cd ../
     chmod -R a+rwx milliqanOffline
     chmod -R a+rwx MilliDAQ
 
