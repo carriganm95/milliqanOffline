@@ -51,7 +51,7 @@ From: centos:centos7
     echo "Compiled MilliDAQ shared library"
     
     cd ../milliqanOffline
-    checkout -b compilationUpdates origin/compilationUpdates
+    git checkout -b compilationUpdates origin/compilationUpdates
     cd ../
 
     chmod -R a+rwx milliqanOffline
