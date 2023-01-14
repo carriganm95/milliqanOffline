@@ -75,7 +75,7 @@ while entry < chain.GetEntries():
         h.LabelsDeflate("Y")
 
         #h.LabelsOption("v")
-        #let the axixs label in the expected labels
+        #let the axixs label in the expected order
         i = 1
         while i <= nx:
             h.GetXaxis().SetBinLabel(i,columnName[i-1])   
@@ -96,5 +96,6 @@ c1.Draw()
 
 f=r.TFile.Open("counting_map.root","recreate")
 h.Write()
+c1.Write()
 f.Close()
 print("plot is save as counting_map.root ")
