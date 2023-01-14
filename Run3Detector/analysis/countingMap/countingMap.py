@@ -1,16 +1,15 @@
 import math
+import ROOT as r
 from ROOT import *
 import numpy as np
-chain = TChain("t")
-chain.Add("MilliQan_Run469_default_v25.root")
-
-#all 318 event map
-#all entries
-#for index, entry in enumerate(chain):
-entry = 0
 
 
-#heat map building for NeHa----------------
+
+
+chain = r.TChain("t")
+#chain.Add('/store/user/mcarrigan/trees/v29/MilliQan_Run' + run + '.*_v29_firstPedestals.root')
+chain.Add('/store/user/mcarrigan/trees/v29/MilliQan_Run575.*_v29_firstPedestals.root')
+
 nx = 6
 ny = 21
 #month =[]
@@ -21,18 +20,17 @@ c1.SetGrid()
 c1.SetLeftMargin(0.30)
 c1.SetRightMargin(0.30)
 c1.SetBottomMargin(0.30)
-h = TH2F("h","event 318 heatmap",nx,-1,nx-1,ny,0,ny)
-#-----------------------
+h = TH2F("h","heatmap",nx,-1,nx-1,ny,0,ny)
 
-
+entry = 0
 while entry < chain.GetEntries():
 
-#while entry < 1200:    
+ 
     chain.GetEvent(entry)
     #chain.GetEvent(306318)
-    if chain.event == 318:
-    #if chain.event < 1002:
-    #if nx < 7: # used for loop over all events
+    #if chain.event == 318:
+
+    if nx < 7: # used for loop over all events
         columnlist = chain.column
         rowlist = chain.row
         layerList = chain.layer
@@ -45,11 +43,8 @@ while entry < chain.GetEntries():
         areaList = chain.area
         
         #j = 1
-
-
-
-
         for chainIndex, chan in enumerate(chanList):
+            #filter condition
             if nPEList[chainIndex] > 40.0 and  heightList[chainIndex]>1200.0 and durationList[chainIndex]>200.0 and areaList[chainIndex]>200.0:
             #if j == 1: # take away filter condition
                 row = rowlist[chainIndex]
@@ -98,3 +93,8 @@ while entry < chain.GetEntries():
 h.Draw("text")  #DISPLAY THE BIN number
 
 c1.Draw()
+
+f=r.TFile.Open("counting_map.root","recreate")
+h.Write()
+f.Close()
+print("plot is save as counting_map.root ")
