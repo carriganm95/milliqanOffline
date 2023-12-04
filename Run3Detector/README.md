@@ -63,5 +63,3 @@ Where `(target macro name).exe` is the one specified when running the `compile.s
 The event displays show the waveform in all the channels above the threshold, the hit map for the detector and details of 10 pulses with maximum height.
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/carriganm95/milliqanOffline/tree/tutorial/tutorial?urlpath=https%3A%2F%2Fgithub.com%2Fcarriganm95%2FmilliqanOffline%2Fblob%2Ftutorial%2FRun3Detector%2Fanalysis%2Ftutorial%2FMilliQanUprootTutorial.ipynb)
-.. image:: https://mybinder.org/badge_logo.svg
- :target: https://mybinder.org/v2/gh/carriganm95/milliqanOffline/tree/tutorial/tutorial?urlpath=https%3A%2F%2Fgithub.com%2Fcarriganm95%2FmilliqanOffline%2Fblob%2Ftutorial%2FRun3Detector%2Fanalysis%2Ftutorial%2FMilliQanUprootTutorial.ipynb
