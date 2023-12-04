@@ -1,0 +1,9 @@
+ROOT
+uproot
+hist
+matplotlib.pyplot
+awkward
+numpy
+pandas
+os
+array
