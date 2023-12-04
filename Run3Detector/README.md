@@ -62,4 +62,5 @@ The code is run by executing the `runOfflineFactory.py` script and providing the
 Where `(target macro name).exe` is the one specified when running the `compile.sh` script. The publish option will include the file details in the mongoDB database. The display option will provide event displays for specified events. The event displays are saved in a displays//Run(run_number) directory.
 The event displays show the waveform in all the channels above the threshold, the hit map for the detector and details of 10 pulses with maximum height.
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/carriganm95/milliqanOffline/tree/tutorial/tutorial?urlpath=https%3A%2F%2Fgithub.com%2Fcarriganm95%2FmilliqanOffline%2Fblob%2Ftutorial%2FRun3Detector%2Fanalysis%2Ftutorial%2FMilliQanUprootTutorial.ipynb)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/carriganm95/milliqanOffline/tutorial?labpath=https%3A%2F%2Fgithub.com%2Fcarriganm95%2FmilliqanOffline%2Fblob%2Ftutorial%2FRun3Detector%2Fanalysis%2Ftutorial%2FMilliQanUprootTutorial.ipynb)
+
